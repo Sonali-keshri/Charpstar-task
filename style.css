@@ -1,0 +1,210 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+ 
+
+body{
+    font-family: 'Lato', sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-weight: bolder;
+}
+
+.pricingCard p{
+    max-width: 150px;
+    font-size: .7rem;
+}
+.pricingCard h3{
+    line-height: 1rem;
+    margin-bottom: 1.2rem;
+}
+.pricingCard table tr td,tr{
+    text-align: left;
+    font-size: .6rem;
+}
+ .smalltxt{
+    font-size: .8rem;
+    margin-top: .5rem;
+    color: rgba(154, 156, 156, 0.692);
+}
+
+.single-card:hover {
+    margin-top: 10px;
+    transform: scale(1.1);
+    transition: 0.3s ease-in;
+}
+img{
+    width: 70%;
+}
+.outer-container{
+    width: 100vw;
+    height: 100vh;
+}
+.inputs{
+    width: 80%;
+}
+.price-card>button{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left !important;
+}
+.box1{
+    width: 60%;
+}
+
+.bg{
+    background: url("./bg3.jpeg");
+    background-size:cover;
+    height: 100vh;
+}
+.over{
+    overflow: hidden;
+}
+@keyframes slidinLeft {
+    from {
+        transform: translateX(-300px);
+       
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+
+.animation{
+    animation: slidinLeft .5s ease-in ;
+}
+
+
+@keyframes fadeOut {
+    0% {
+      opacity: 0;
+       
+    }
+    100%{
+       opacity: 1;
+    }
+}
+
+table{
+    margin: 0 !important;
+    line-height: 0rem !important;
+    
+}
+table tbody{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: .7rem;
+}
+td{
+    color: grey;
+}
+th{
+    text-align: right;
+}
+sup, sub{
+    font-size: 1.2rem;
+}
+@keyframes move {
+    from {
+         transform: translate(0%, 0%);
+    }
+    to{
+        transform: translate(-5px, -45%);  
+    }
+}
+.moveup{
+    animation: move .6s ease-in ;
+    transform: translate(-5px, -45%);
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+    line-height: 1.5rem;
+}
+hr{
+    margin: 10px;
+}
+.animate{
+    display: block !important;
+    animation: fadeOut 2s ease-in ;
+ 
+}
+
+@media (max-width:768px) {
+    .outer-container{
+        width: 100%;
+        height: 90%;
+        margin-top: 4rem;
+    }
+    .customize{
+        font-size: 3rem;
+    }
+    .main-container{
+       flex-direction: column;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .over{
+        overflow: auto;
+    }
+
+}
+@media (max-width:414px) {
+    #home>div{
+        margin-top: 5rem;
+        height: 100vh;
+    }
+    .outer-container{
+        width: 100vw;
+        height: 100%;
+    }
+    .main-container{
+       flex-direction: column;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+     img{
+        display: none;
+    }
+    .inputs{
+        width: 100% ;
+        flex-direction: column;
+
+    }
+    .inputs>div{
+        margin-bottom: 1rem;
+    }
+    .price-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .box{
+        width: 100%;
+    }
+    #back{
+        padding: 0 !important;
+    }
+    .navIcon{
+        padding-right: 10px !important;
+    }
+  
+}
+@media (max-width:1206px){
+    
+    .inputs{
+        width: 100%;
+    }
+}
+
+/* .cardBox{
+    background-image: url("https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+} */

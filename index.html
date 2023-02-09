@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pricing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body>
+    <div class="over" id="wrapper">
+      <div class="d-flex justify-content-between px-1 py-2">
+        <p
+          id="back"
+          style="font-size: .8rem; color: gray; cursor: pointer ; padding-left: 2rem;"
+          onclick="gotoHome()"
+
+        >
+        <i class="fa-solid fa-chevron-left" style="font-size: .8rem;"></i> Restart
+        </p>
+        <h2
+          onclick="gotoHome()"
+          style="
+            color: #07bbbb;
+            font-weight: 1000px;
+            letter-spacing: -1px;
+            cursor: pointer;
+            font-family: 'Nunito Sans', sans-serif; 
+            font-weight: 700;
+          "
+        >
+          Jetty
+        </h2>
+        <div style="padding-right: 3rem" class="navIcon">
+          <i
+            class="material-icons"
+            style="color: rgb(197, 197, 197); cursor: pointer"
+            >call</i
+          >
+          <i
+            class="material-icons"
+            style="color: rgb(197, 197, 197); cursor: pointer"
+            >sms</i
+          >
+        </div>
+      </div>
+
+      <section id="home">
+        <div
+          id="home"
+          class="container d-flex flex-column justify-content-center align-items-center m-auto"
+          style="height: 80vh; display: 'flex'"
+        >
+          <h4 style="font-weight: 900; margin-bottom: 1rem;">Pick a base paln:</h4>
+
+          <div class="card-group">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center single-card"
+              id="basic-card"
+              style="cursor: pointer"
+              onmouseover="showBtnBasic()"
+              onmouseout="hideBtnBasic()"
+            >
+              <div
+                class="card m-2 shadow "
+                style="max-width: 230px; background-color: transparent"
+              >
+               
+                <div class="card-body text-center pricingCard">
+                  <h2 class="card-title text-primary" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800;">
+                    Basic
+                  </h2>
+                  <p class="card-text">
+                    A no-frills plan to meet most landlods requirements
+                  </p>
+                  <h3
+                    id="essential-price"
+                    class="text-primary"
+                    style="font-weight: 900"
+                  >
+                    <sup>$</sup><span>12</span
+                    ><sup style="font-weight: 400">55/m</sup>
+                  </h3>
+                  <p class="card-text">
+                    <small class="text-muted">Key Features</small>
+                  </p>
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="text-muted">Everyday Belongings</td>
+                        <th>$10,000</th>
+                      </tr>
+
+                      <tr>
+                        <td class="text-muted">Portable Electronic</td>
+                        <th>$1,000</th>
+                      </tr>
+                      <tr>
+                        <td class="text-muted">Personal Liability</td>
+                        <th>$100,000</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="choose-plan-basic"
+                class="btn btn-primary btn-lg rounded-pill"
+                style="display: none"
+                onclick="basicPricing()"
+              >
+                Choose Plan
+              </button>
+              <p class="smalltxt" style="display: none" id="smalltxt-Basic">
+                Continue to view or edit details
+              </p>
+            </div>
+
+            <div
+              class="d-flex flex-column justify-content-center align-items-center single-card"
+              id="essential-card"
+              style="cursor: pointer"
+              onmouseover="showBtnEssential()"
+              onmouseout="hideBtnEssential()"
+            >
+              <div
+                class="card m-2 position-relative shadow"
+                style="max-width: 230px; background-color: transparent"
+              >
+              <span
+              class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary"
+            >
+              Most Popular
+              <span class="visually-hidden">unread messages</span>
+            </span>
+                <div class="card-body text-center pricingCard">
+                  <h2 class="card-title text-primary" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800;">
+                    Essential
+                  </h2>
+                  <p class="card-text">
+                    Our top-seller for "the average renter."
+                  </p>
+                  <h3 id="essential-price" class="text-primary">
+                    <span style="font-weight: 900">18</span><sup>55/m</sup>
+                  </h3>
+                  <p class="card-text">
+                    <small class="text-muted">Key Features</small>
+                  </p>
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="text-muted">Everyday Belongings</td>
+                        <th>$20,000</th>
+                      </tr>
+
+                      <tr>
+                        <td class="text-muted">Portable Electronic</td>
+                        <th>$1,000</th>
+                      </tr>
+                      <tr>
+                        <td class="text-muted">Personal Liability</td>
+                        <th>$200,000</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="choose-plan-essential"
+                class="btn btn-primary btn-lg rounded-pill"
+                style="display: none"
+                onclick="essentialPricing()"
+              >
+                Choose Plan
+              </button>
+              <p class="smalltxt" style="display: none" id="smalltxt-Essential">
+                Continue to view or edit details
+              </p>
+            </div>
+
+            <div
+              class="d-flex flex-column justify-content-center align-items-center single-card"
+              id="premium-card"
+              style="cursor: pointer"
+              onmouseover="showBtnPremium()"
+              onmouseout="hideBtnPremium()"
+            >
+              <div
+                class="card m-2 shadow"
+                style="max-width: 230px; background-color: transparent"
+              >
+                <div class="card-body text-center pricingCard">
+                  <h2 class="card-title text-primary" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800;">
+                    Premium
+                  </h2>
+                  <p class="card-text">
+                    The perfect plan for those with a few extra belongings.
+                  </p>
+                  <h3 id="essential-price" class="text-primary">
+                    <sup>$</sup><span style="font-weight: 900">33</span
+                    ><sup>55/m</sup>
+                  </h3>
+                  <p class="card-text">
+                    <small class="text-muted">Key Features</small>
+                  </p>
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="text-muted">Everyday Belongings</td>
+                        <th>$40.000</th>
+                      </tr>
+
+                      <tr>
+                        <td class="text-muted">Portable Electronic</td>
+                        <th>$3.000</th>
+                      </tr>
+                      <tr>
+                        <td class="text-muted">Personal Liability</td>
+                        <th>$300.000</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+           
+              <button
+                type="button"
+                class="btn btn-primary btn-lg rounded-pill"
+                style="display: none"
+                id="choose-plan-premium"
+                onclick="premiumPricing()"
+              >
+                Choose Plan
+              </button>
+              <p class="smalltxt" style="display: none" id="smalltxt-Premium">
+                Continue to view or edit details
+              </p>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Basic pricing page -->
+      <section id="basic-home" style="display: none">
+        <div
+          class="container text-center outer-container d-flex justify-content-center mt-4"
+        >
+          <div class="d-flex main-container" style="gap: 2rem">
+            <div class="box1 d-none mx-5" id="leftDiv">
+              <div >
+                <h1 class="customize" style="font-family: 'Nunito Sans', sans-serif; font-weight: 900;">Customize your <br />Jetty plan.</h1>
+                <div class="d-flex m-auto inputs mt-4">
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Start</span>
+                    </div>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Deductible</span>
+                    </div>
+                    <input type="number" value="200" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img src="./bg4.png" class="mt-4" alt="image" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-start price-card box animation">
+              <div class="d-flex flex-column">
+                <div
+                  class="card m-2 text-left p-2"
+                  style="max-width: 230px"
+                  id="rightDiv"
+                >
+                  <div class="card-body p-2" >
+                    <h1 class="card-title text-primary" id="basic" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800;">Basic</h1>
+                    <div id="innerTxt">
+                      <p class="card-text px-2 " style="font-size: 0.7rem">
+                        212 South Broadway Street, Apt 23 New York, Ny 10012
+                      </p>
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr>
+                            <td scope="col">Start Date</td>
+                            <th scope="col">Today</th>
+                          </tr>
+
+                          <tr>
+                            <td>Ductiable</td>
+                            <th>$500</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <hr />
+
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr>
+                            <td>Household Belongings</td>
+                            <th>Today</th>
+                          </tr>
+
+                          <tr>
+                            <td>Electronic Coverage</td>
+                            <th>$500</th>
+                          </tr>
+                          <tr>
+                            <td>Valuables Coverage</td>
+                            <th>_____</th>
+                          </tr>
+                          <tr>
+                            <td>Liability</td>
+                            <th>$500</th>
+                          </tr>
+                          <tr>
+                            <td>Loss of use</td>
+                            <th>$500</th>
+                          </tr>
+                          <tr>
+                            <td>Medical Payment</td>
+                            <th>$500</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <hr />
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr>
+                            <td>Landloard</td>
+                            <th>_____</th>
+                          </tr>
+
+                          <tr>
+                            <td>Other People</td>
+                            <th>_____</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around align-items-center bg-primary  text-light rounded-pill " style=" width: 240px">
+                  <div class="position-relative">
+                    <sup class='position-absolute' style="font-size: .8rem; top:30%; left: -20%;">$</sup><span style="font-size: 2.5rem; 
+                    font-weight: 700; font-family: 'Poppins', sans-serif;" >18</span>
+                    <sup class='position-absolute' style="font-size: .8rem; top:30%">55/m</sub></sup>
+                  </div>
+                  <div>
+                    <span style=" font-size: 1.5rem;">Pay Now</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Essential pricing page -->
+
+      <section id="essential-home" style="display: none">
+        <div
+          class="container text-center outer-container d-flex justify-content-center mt-4"
+        >
+          <div class="row main-container">
+            <div class="col-8 box">
+              <div>
+                <h1 class="customize" style="font-family: 'Nunito Sans', sans-serif; font-weight: 900; max-width: 200px; background-color: red;">Customize your Jetty plan.</h1>
+                <div class="d-flex m-auto inputs mt-4">
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Start</span>
+                    </div>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Deductible</span>
+                    </div>
+                    <input type="number" value="1000" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img src="./bg4.png" class="mt-4" alt="image" />
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-start price-card box">
+              <div class="d-flex flex-column">
+                <div
+                class="card m-2 text-left p-2"
+                style="max-width: 230px"
+                id="rightDiv"
+              >
+                <div class="card-body p-2">
+                  <h2 class="card-title text-primary" id="basic" style="font-family: 'Nunito Sans', sans-serif; font-weight: 800;">Essential</h2>
+                  <div id="innerTxt">
+                    <p class="card-text px-2 " style="font-size: 0.7rem">
+                      212 South Broadway Street, Apt 23 New York, Ny 10012
+                    </p>
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td scope="col">Start Date</td>
+                          <th scope="col">Today</th>
+                        </tr>
+
+                        <tr>
+                          <td>Ductiable</td>
+                          <th>$500</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr />
+
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td>Household Belongings</td>
+                          <th>Today</th>
+                        </tr>
+
+                        <tr>
+                          <td>Electronic Coverage</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Valuables Coverage</td>
+                          <th>_____</th>
+                        </tr>
+                        <tr>
+                          <td>Liability</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Loss of use</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Medical Payment</td>
+                          <th>$500</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr />
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td>Landloard</td>
+                          <th>_____</th>
+                        </tr>
+
+                        <tr>
+                          <td>Other People</td>
+                          <th>_____</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="d-flex justify-content-around align-items-center bg-primary  text-light rounded-pill " style=" width: 240px">
+                <div class="position-relative">
+                  <sup class='position-absolute' style="font-size: .8rem; top:30%; left: -20%;">$</sup><span style="font-size: 2.5rem; 
+                  font-weight: 700; font-family: 'Poppins', sans-serif;" >18</span>
+                  <sup class='position-absolute' style="font-size: .8rem; top:30%">55/m</sub></sup>
+                </div>
+                <div>
+                  <span style=" font-size: 1.5rem;">Pay Now</span>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- Premium pricing page -->
+      <section id="premium-home" style="display: none">
+        <div
+          class="container text-center outer-container d-flex justify-content-center mt-4"
+        >
+          <div class="row main-container">
+            <div class="col-8 box">
+              <div>
+                <h1 class="customize" style="font-family: 'Nunito Sans', sans-serif; font-weight: 900;">Customize your <br />Jetty plan.</h1>
+                <div class="d-flex m-auto inputs mt-4">
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Start</span>
+                    </div>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="input-group mx-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text text-muted" id="">Deductible</span>
+                    </div>
+                    <input type="number" value="1000" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img src="./bg4.png" class="mt-4" alt="image" />
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-start price-card box">
+              <div class="d-flex flex-column">
+                  <div
+                class="card m-2 text-left p-2"
+                style="max-width: 230px"
+                id="rightDiv"
+              >
+                <div class="card-body p-2">
+                  <h1 class="card-title text-primary" id="basic" style="font-weight: 700;">Basic</h1>
+                  <div id="innerTxt">
+                    <p class="card-text px-2 " style="font-size: 0.7rem">
+                      212 South Broadway Street, Apt 23 New York, Ny 10012
+                    </p>
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td scope="col">Start Date</td>
+                          <th scope="col">Today</th>
+                        </tr>
+
+                        <tr>
+                          <td>Ductiable</td>
+                          <th>$500</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr />
+
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td>Household Belongings</td>
+                          <th>Today</th>
+                        </tr>
+
+                        <tr>
+                          <td>Electronic Coverage</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Valuables Coverage</td>
+                          <th>_____</th>
+                        </tr>
+                        <tr>
+                          <td>Liability</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Loss of use</td>
+                          <th>$500</th>
+                        </tr>
+                        <tr>
+                          <td>Medical Payment</td>
+                          <th>$500</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr />
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td>Landloard</td>
+                          <th>_____</th>
+                        </tr>
+
+                        <tr>
+                          <td>Other People</td>
+                          <th>_____</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="d-flex justify-content-around align-items-center bg-primary  text-light rounded-pill " style=" width: 240px">
+              <div class="position-relative">
+                <sup class='position-absolute' style="font-size: .8rem; top:30%; left: -20%;">$</sup><span style="font-size: 2.5rem; 
+                font-weight: 700; font-family: 'Poppins', sans-serif;" >18</span>
+                <sup class='position-absolute' style="font-size: .8rem; top:30%">55/m</sub></sup>
+              </div>
+              <div>
+                <span style=" font-size: 1.5rem;">Pay Now</span>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
